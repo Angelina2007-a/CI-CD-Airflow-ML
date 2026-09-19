@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Data and trained model artifacts (generated dynamically during CI/CD)
+models/*.joblib
+models/*.json
+production_model/*.joblib
+production_model/*.json
+data/processed/*.csv
