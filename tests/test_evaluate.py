@@ -14,7 +14,7 @@ def test_model_evaluation(tmp_path):
     metadata_path = os.path.join(model_dir, "metadata.json")
     metrics_path = os.path.join(model_dir, "metrics.json")
 
-    res_data = preprocess_data(data_dir=data_dir)
+    res_data = preprocess_data(data_dir=data_dir, models_dir=model_dir)
     train_model(
         train_path=res_data["train_path"],
         model_output_path=model_path,

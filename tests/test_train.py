@@ -6,10 +6,11 @@ from src.train import train_model
 
 def test_model_training(tmp_path):
     data_dir = os.path.join(tmp_path, "data")
-    model_path = os.path.join(tmp_path, "models", "model.joblib")
-    metadata_path = os.path.join(tmp_path, "models", "metadata.json")
+    model_dir = os.path.join(tmp_path, "models")
+    model_path = os.path.join(model_dir, "model.joblib")
+    metadata_path = os.path.join(model_dir, "metadata.json")
 
-    res_data = preprocess_data(data_dir=data_dir)
+    res_data = preprocess_data(data_dir=data_dir, models_dir=model_dir)
     metadata = train_model(
         train_path=res_data["train_path"],
         model_output_path=model_path,
